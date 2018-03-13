@@ -11,6 +11,10 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vuetify/1.0.6/vuetify.css">
   
   <style>
+    /* Hide side scrollbar if content does not need it */
+    html {
+      overflow-y: auto; 
+    }
     .application {
       font-family: 'Quicksand', sans-serif;
     }
@@ -19,25 +23,38 @@
     #jumbo-card {
       background-color: rgba(0, 0, 0, 0);
     }
+
+    /* Animation */
+    .v-enter-active, .v-leave-active {
+      transition: all 1s ease;
+    }
+
+    .v-enter, .v-leave-to {
+      transform: scale(0.1);
+      opacity: 0;
+    }
   </style>
 </head>
 
 <body>
   <v-app id="app">
-    <app-navbar :app-name="appName"></app-navbar>
-    <app-header></app-header>
+    <app-navbar :app-name="appName" :folder-image="folderImage"></app-navbar>
+    <app-header :folder-image="folderImage"></app-header>
+    <app-projects :folder-image="folderImage"></app-projects>
   </v-app>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vuetify/1.0.6/vuetify.js"></script>
   <script src="components/app-navbar.js"></script>
   <script src="components/app-header.js"></script>
+  <script src="components/app-projects.js"></script>
   <script type='text/javascript'>
     new Vue({
       el: '#app',
       data () {
         return {
-          appName: 'Portfolio of Ivan Lim'
+          appName: 'Portfolio of Ivan Lim',
+          folderImage: './assets/img/'
         }
       }
     });
