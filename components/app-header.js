@@ -10,7 +10,7 @@ Vue.component('app-header', {
               <h2>
                 25 years software development experience
                 <em style="display:block;font-size:1rem;">- Vue.js, Laravel, Vuetify, Bootstrap, PHP, Python, HTML, CSS, MySQL, SQLite, Firebase, GraphQL etc.</em>
-              </h3>
+              </h2>
             </v-card>
           </v-flex>
 
