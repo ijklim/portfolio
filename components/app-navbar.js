@@ -11,6 +11,10 @@ Vue.component('app-navbar', {
       <v-btn icon href="https://github.com/ijklim" target="_blank" right>
         <img :src="imageGithub" height="32" />
       </v-btn>
+
+      <v-btn icon href="https://codepen.io/ivanlim" target="_blank" right>
+        <img :src="imageCodepen" height="32" />
+      </v-btn>
     </v-toolbar>
   `,
   data () {
@@ -28,6 +32,9 @@ Vue.component('app-navbar', {
     }
   },
   computed: {
+    imageCodepen () {
+      return this.folderImage + 'icon-codepen-32.png';
+    },
     imageGithub () {
       return this.folderImage + 'icon-github-32.png';
     },
