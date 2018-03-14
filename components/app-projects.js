@@ -19,6 +19,8 @@ Vue.component('app-projects', {
             >
             </v-card-media>
             
+            <v-divider />
+            
             <v-card-text>
               <h3 v-html="project.name" class="mb-2"></h3>
               <v-chip
