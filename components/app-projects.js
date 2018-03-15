@@ -4,21 +4,35 @@ Vue.component('app-projects', {
   template: `
     <v-container grid-list-xl>
       <v-layout wrap>
+
+        <v-flex xs12 text-xs-right>
+          <v-btn-toggle v-model="toggleView">
+            <v-btn flat>
+              <v-icon>view_module</v-icon>
+            </v-btn>
+            <v-btn flat>
+              <v-icon>view_headline</v-icon>
+            </v-btn>
+          </v-btn-toggle>
+        </v-flex>
+
         <v-flex
           xs12
           sm6
           lg4
-          
           v-for="project in projects"
           :key="project.id"
         >
-          <v-card hover :href="project.url" height="100%">
-            <v-card-media
-              height="330px"
-              :src="getThumbnailUrl(project.name)"
-            >
-            </v-card-media>
-            
+          <v-card hover :href="project.url" target="_blank" height="100%">
+            <transition name="bounce">
+              <v-card-media
+                :height="$vuetify.breakpoint.mdAndDown ? '330px': '290px'"
+                v-if="toggleView === 0"
+                :src="getThumbnailUrl(project.name)"
+              >
+              </v-card-media>
+            </transition>
+
             <v-divider />
             
             <v-card-text>
@@ -52,7 +66,8 @@ Vue.component('app-projects', {
         { name: 'Random Quote Machine', url: `${URL_CODEPEN}yvxqQj`, tags: ['Vue.js', 'Vuetify'] },
         { name: 'Wikipedia Viewer', url: `${URL_CODEPEN}zRMVEd`, tags: ['Vue.js', 'Vuetify'] },
         { name: 'Twitch TV', url: `${URL_CODEPEN}VQggvY`, tags: ['Vue.js', 'Vuetify'] }
-      ]
+      ],
+      toggleView: 0
     }
   },
   props: {
@@ -62,7 +77,10 @@ Vue.component('app-projects', {
     }
   },
   computed: {
-    
+    heightThumbnail () {
+      console.log($vuetify.breakpoint.smAndDown);
+      return "290px";
+    }
   },
   methods: {
     /**
