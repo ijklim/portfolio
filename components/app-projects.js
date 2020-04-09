@@ -34,7 +34,7 @@ Vue.component('app-projects', {
             </transition>
 
             <v-divider />
-            
+
             <v-card-text>
               <h3 v-html="project.name" class="mb-2"></h3>
               <v-chip
@@ -58,7 +58,7 @@ Vue.component('app-projects', {
         { name: 'Simon Game', url: `${URL_CODEPEN}LdVOme`, tags: ['Vue.js', 'Vuetify', 'SweetAlert'] },
         { name: 'Tic Tac Toe', url: `${URL_CODEPEN}JLPyPq`, tags: ['Vue.js', 'Vuetify', 'SweetAlert'] },
         { name: 'Notes Sharing App', url: `https://notes-2go.firebaseapp.com`, tags: ['Vue.js', 'Vuetify', 'Vuex', 'Vuelidate', 'Firebase'] },
-        { name: 'Chat App', url: `http://larachat.aiwebstudio.com`, tags: ['Laravel', 'Vue.js', 'Bootstrap', 'Pusher'] },
+        { name: 'Chat App', url: `https://larachat.ivan-lim.com`, tags: ['Laravel', 'Vue.js', 'Bootstrap', 'Pusher'] },
         { name: 'Pomodoro Timer', url: `https://pomodoro-timer.github.io`, tags: ['Vue.js', 'Bootstrap', 'Vuex', 'PWA'] },
         { name: 'Calculator', url: `${URL_CODEPEN}xYBdbm`, tags: ['Vue.js', 'Vuetify'] },
         { name: 'Pomodoro Clock', url: `${URL_CODEPEN}BYgKWa`, tags: ['Vue.js', 'Vuetify'] },
@@ -85,7 +85,7 @@ Vue.component('app-projects', {
   methods: {
     /**
      * Sample thumbnail file name: `thumb--simon-game.jpg`
-     * @param {String} projectName 
+     * @param {String} projectName
      */
     getThumbnailUrl (projectName) {
       return this.folderImage +
@@ -95,6 +95,6 @@ Vue.component('app-projects', {
     }
   },
   mounted () {
-    
+
   }
 });
