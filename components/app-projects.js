@@ -59,7 +59,7 @@ Vue.component('app-projects', {
         { name: 'Tic Tac Toe', url: `${URL_CODEPEN}JLPyPq`, tags: ['Vue.js', 'Vuetify', 'SweetAlert'] },
         { name: 'Notes Sharing App', url: `https://notes-2go.firebaseapp.com`, tags: ['Vue.js', 'Vuetify', 'Vuex', 'Vuelidate', 'Firebase'] },
         { name: 'Chat App', url: `https://larachat.ivan-lim.com`, tags: ['Laravel', 'Vue.js', 'Bootstrap', 'Pusher'] },
-        { name: 'Pomodoro Timer', url: `https://pomodoro.ijklim.io`, tags: ['Vue.js', 'Bootstrap', 'Vuex', 'PWA'] },
+        { name: 'Pomodoro Timer', url: `https://pomodoro.ivan-lim.com`, tags: ['Vue.js', 'Bootstrap', 'Vuex', 'PWA'] },
         { name: 'Calculator', url: `${URL_CODEPEN}xYBdbm`, tags: ['Vue.js', 'Vuetify'] },
         { name: 'Pomodoro Clock', url: `${URL_CODEPEN}BYgKWa`, tags: ['Vue.js', 'Vuetify'] },
         { name: 'Weather Forecast', url: `${URL_CODEPEN}zRMYZP`, tags: ['Vue.js', 'Vuetify'] },
